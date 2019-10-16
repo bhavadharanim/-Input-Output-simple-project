@@ -1,0 +1,8 @@
+<h1>Parent component</h1>
+<h2>Welcome {{title}}</h2>
+Name:<input [(ngModel)]="Name" type="text" placeholder="Enter your name....."><br><button (click)="onClick()" mat-raised-button color="primary">Submit</button><br>
+<mat-card>{{Email}}</mat-card>
+is coming from parent component
+<hr>
+<h1>Child Component</h1>
+<app-child (childData)="Email=$event" [ParentData]="name"></app-child>
