@@ -7,22 +7,29 @@ import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 
 import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card'; 
+import {MatCardModule} from '@angular/material/card';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component'; 
+import {EmployeeService} from './employee.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    EmployeeListComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

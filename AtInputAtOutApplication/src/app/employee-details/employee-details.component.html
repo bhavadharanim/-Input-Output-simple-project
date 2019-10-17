@@ -1,0 +1,12 @@
+<p>employee-details works!</p>
+<h1>Employee Details</h1>
+<div *ngFor="let i of Employee">
+    <li>{{i.id}}.{{i.Name}}</li>
+</div>
+<button (click)="getEmp()">Click</button>
+
+<h1>Service using Employee Detail</h1>
+<div *ngFor="let i of ServiceSharingEmployeeDetail">
+        <li>{{i.id}}.{{i.Name}}</li>
+        
+</div>

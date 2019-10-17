@@ -1,0 +1,13 @@
+<p>employee-list works!</p>
+<h1>Employee List</h1>
+<div *ngFor="let i of Employee">
+    <li>{{i.id}}.{{i.Name}}</li>
+
+</div>
+<button (click)="getEmp()">Click</button>
+
+<h1>Service using Employee List</h1>
+<div *ngFor="let i of ServiceSharingEmployeeDetail">
+        <li>{{i.id}}.{{i.Name}}</li>
+        
+</div>
