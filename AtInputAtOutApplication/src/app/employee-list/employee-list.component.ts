@@ -17,9 +17,11 @@ export class EmployeeListComponent implements OnInit {
   ];
 
   public ServiceSharingEmployeeDetail=[];
+  public value:any=[];
 
-  
+  public name="bhavadharanim";
 
+  public ID=3;
 
   ngOnInit() {
     // this.ServiceSharingEmployeeDetail=this.employee.getEmployeeDetail();
@@ -29,6 +31,25 @@ export class EmployeeListComponent implements OnInit {
     this.ServiceSharingEmployeeDetail=this.employee.getEmployeeDetail();
     console.log(this.ServiceSharingEmployeeDetail);
 
+    this.employee.getValue()
+    .subscribe(data=>{
+      this.value=data
+      console.log(data.length+"  "+this.value.Name);
+    });
+    
+    console.log("Http request value.....",this.employee.getValue)
+
+
+    this.employee.postValue()
+    .subscribe(data=>{
+      this.value=data;
+      console.log("posting the value"+data);
+    })
+    
+  }
+
+  passValue(){
+      return this.name;
   }
   
   

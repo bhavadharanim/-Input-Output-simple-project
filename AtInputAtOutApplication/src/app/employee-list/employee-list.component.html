@@ -8,6 +8,10 @@
 
 <h1>Service using Employee List</h1>
 <div *ngFor="let i of ServiceSharingEmployeeDetail">
-        <li>{{i.id}}.{{i.Name}}</li>
-        
+        <li>{{i.id}}.{{i.Name}}</li>       
+</div>
+<h1>This value Getting from Server using HTTPClient</h1>
+<div *ngFor="let i of value">
+    <a>{{i.id}}.{{i.Name}}</a>  
+    <a href="#">{{i.Name}}</a>     
 </div>
